@@ -351,12 +351,12 @@ class Parser {
           case Parser.FeedbackTypes.ALWAYS:
             sequence = {
               ...sequence,
-              feedback1: feedback1 == "n" ? "n" : feedback1,
+              feedback1,
             };
           case Parser.FeedbackTypes.TRUE_OR_FALSE:
             sequence = {
               ...sequence,
-              feedback2: feedback2 == "n" ? "n" : feedback2,
+              feedback2,
             };
             break;
           case Parser.FeedbackTypes.ALWAYS:
