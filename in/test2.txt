@@ -1,0 +1,30 @@
+Task WM Test Experiment
+
+[Descriptions]
+text_file S test_inst.txt n n
+text T1 "Which fruit do yon eat?" 20 red
+image I1 img/rr1.png
+image I2 img/yy1.png
+text T2 "eat" n n
+text T3 "don't eat" n n
+image F img/fix.png
+text T4 "Which is the previous image?" 20 blue
+image correct img/cardsorting/correct2.png
+image wrong img/cardsorting/wrong2.png
+text T5 "Thank you!" 40 n
+[EndDescriptions]
+
+[PreSeq]
+0 S 3000 n inf n 0 inf n n n n n
+[EndPreSeq]
+
+[MainSeq]
+500 T1 inf I1,I2 inf n 0 10000 n n n n y
+1000 F 2000 n inf n 0 inf n n n n n
+1500 I1 inf T2,T3 inf n 0 10000 n n n n y
+2000 T4 inf I1,I2 inf 0 0 10000 tf 2000 correct wrong y
+[EndMainSeq]
+
+[PostSeq]
+0 T5 5000 n inf n 0 inf n n n n n
+[EndPostSeq]

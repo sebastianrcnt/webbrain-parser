@@ -1,0 +1,231 @@
+Task WM SST
+[Background]
+image BI1 img/b2.png
+[EndBackground]
+
+[Descriptions]
+image F1 img/F001.png
+image F2 img/F002.png
+image F3 img/F003.png
+image F4 img/F004.png
+image F5 img/F005.png
+image F6 img/F006.png
+image F7 img/F007.png
+image F8 img/F008.png
+image F9 img/F009.png
+image F10 img/F010.png
+image F11 img/F011.png
+image F12 img/F012.png
+image F13 img/F013.png
+image F14 img/F014.png
+image F15 img/F015.png
+image F16 img/F016.png
+image F17 img/F017.png
+image F18 img/F018.png
+image F19 img/F019.png
+image F20 img/F020.png
+image F21 img/F021.png
+image F22 img/F022.png
+image F23 img/F023.png
+image F24 img/F024.png
+image F25 img/F025.png
+image F26 img/F026.png
+image F27 img/F027.png
+image F28 img/F028.png
+image F29 img/F029.png
+image F30 img/F030.png
+image F31 img/F031.png
+image F32 img/F032.png
+image F33 img/F033.png
+image F34 img/F034.png
+image F35 img/F035.png
+image F36 img/F036.png
+image F37 img/F037.png
+image F38 img/F038.png
+image F39 img/F039.png
+image F40 img/F040.png
+image F41 img/F041.png
+image F42 img/F042.png
+image F43 img/F043.png
+image F44 img/F044.png
+image F45 img/F045.png
+image F46 img/F046.png
+image F47 img/F047.png
+image F48 img/F048.png
+image F49 img/F049.png
+image F50 img/F050.png
+image F51 img/F051.png
+image F52 img/F052.png
+image F53 img/F053.png
+image F54 img/F054.png
+image F55 img/F055.png
+image F56 img/F056.png
+image F57 img/F057.png
+image F58 img/F058.png
+image F59 img/F059.png
+image F60 img/F060.png
+image F61 img/F061.png
+image F62 img/F062.png
+image F63 img/F063.png
+image F64 img/F064.png
+image F65 img/F065.png
+image F66 img/F066.png
+image F67 img/F067.png
+image F68 img/F068.png
+image F69 img/F069.png
+image F70 img/F070.png
+image F71 img/F071.png
+image F72 img/F072.png
+image F73 img/F073.png
+image F74 img/F074.png
+image F75 img/F075.png
+image F76 img/F076.png
+image F77 img/F077.png
+image F78 img/F078.png
+image F79 img/F079.png
+image F80 img/F080.png
+image F81 img/F081.png
+image F82 img/F082.png
+image F83 img/F083.png
+image F84 img/F084.png
+image F85 img/F085.png
+image F86 img/F086.png
+image F87 img/F087.png
+image F88 img/F088.png
+image F89 img/F089.png
+image F90 img/F090.png
+image F91 img/F091.png
+image F92 img/F092.png
+image F93 img/F093.png
+image F94 img/F094.png
+image F95 img/F095.png
+image F96 img/F096.png
+image F97 img/F097.png
+image F98 img/F098.png
+image F99 img/F099.png
+image F100 img/F100.png
+image F101 img/F101.png
+image F102 img/F102.png
+image F103 img/F103.png
+image s1 img/1.png 
+image s2 img/2.png 
+image s3 img/3.png 
+image s4 img/4.png
+image s5 img/5.png
+image I1 img/START.png
+image I2 img/instr.png
+audio A1 img/coffee.mp3
+[EndDescriptions]                                                                                 
+
+[PreSeq]
+0 I2 inf I1 inf n n inf n n n n n
+[EndPreSeq]
+
+[MainSeq]
+0 F1 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F2 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F3 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F4 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F5 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F6 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F7 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F8 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F9 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F10 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F11 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F12 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F13 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F14 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F15 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F16 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F17 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F18 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F19 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F20 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F21 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F22 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F23 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F24 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F25 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F26 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F27 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F28 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F29 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F30 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F31 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F32 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F33 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F34 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F35 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F36 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F37 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F38 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F39 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F40 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F41 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F42 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F43 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F44 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F45 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F46 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F47 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F48 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F49 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F50 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F51 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F52 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F53 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F54 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F55 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F56 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F57 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F58 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F59 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F60 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F61 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F62 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F63 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F64 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F65 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F66 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F67 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F68 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F69 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F70 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F71 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F72 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F73 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F74 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F75 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F76 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F77 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F78 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F79 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F80 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F81 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F82 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F83 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F84 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F85 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F86 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F87 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F88 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F89 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F90 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F91 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F92 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F93 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F94 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F95 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F96 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F97 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F98 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F99 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F100 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F101 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F102 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+0 F103 inf s1,s2,s3,s4,s5 inf n 0 inf a 1000 A1 n y
+[EndMainSeq]
+
+[PostSeq]
+[EndPostSeq]
