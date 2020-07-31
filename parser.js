@@ -66,10 +66,10 @@ class Parser {
       }
     }
 
-    // Instructions 에서 해당 시퀀스를 찾지 못했을 경우
+    // Instructions 섹션 파싱에 실패했을 경우
     if (sectionStartIndex === null || sectionEndIndex === null) {
       throw new Error(
-        `해당 키워드(${keyword})에 대한 시퀀스를 추출하지 못했습니다`
+        `해당 키워드(${keyword})에 대한 섹션을 추출하지 못했습니다`
       );
     } else if (sectionStartIndex === null && sectionEndIndex === null) {
       throw new Error(
@@ -85,9 +85,9 @@ class Parser {
   }
 
   /**
-   * Splits text with given character, but with escaped content which is inside two pair of characters
+   * Splits text with given character, ignoring content inside two pair of characters
    * @param  {string} text text to be splitted
-   * @param  {string} splitChar character to split
+   * @param  {string} splitChar character to split with
    * @param  {string} pairChar  character of a pair of brackets whose inner content will be escaped
    * @returns {string[]} splittedArray
    */
