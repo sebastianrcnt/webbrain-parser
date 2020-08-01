@@ -1,5 +1,5 @@
 const fs = require("fs");
-const Parser = require("./parser.js");
+const Parser = require("./parser.v2.js");
 
 try {
   const test1 = fs.readFileSync("./in/test1.txt", "utf8").toString();
