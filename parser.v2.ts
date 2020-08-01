@@ -9,9 +9,9 @@ interface Stimulus {
   stimulusType: StimulusType;
   content?: string;
   button?: boolean;
-  filePath?: string;
-  fontSize?: number | null;
-  fontColor?: string | null;
+  filePath: string | null;
+  fontSize: number | null;
+  fontColor: string | null;
 }
 
 interface Sequence {
@@ -253,6 +253,9 @@ class Parser {
       // Construct Stimulus Object according to Stimulus Type
       let stimulus: Stimulus = {
         stimulusType: stimulusType as StimulusType,
+        filePath: null,
+        fontSize: null,
+        fontColor: null,
       };
 
       switch (stimulusType) {
@@ -262,7 +265,7 @@ class Parser {
               filePath, // ex) 'img/3.png'
               button, // true, false => 어떤 값이든 있으면 true, false
             ] = left;
-            stimulus = { stimulusType, filePath, button: !!button };
+            stimulus = { ...stimulus, filePath, button: !!button };
           }
           break;
 
@@ -271,7 +274,7 @@ class Parser {
             let [content, fontSize, fontColor] = left;
 
             stimulus = {
-              stimulusType,
+              ...stimulus,
               content,
               fontSize: fontSize === "n" ? null : parseInt(fontSize),
               fontColor: fontColor === "n" ? null : fontColor,
@@ -283,7 +286,7 @@ class Parser {
           {
             let [filePath, fontSize, fontColor] = left;
             stimulus = {
-              stimulusType,
+              ...stimulus,
               filePath,
               fontSize: fontSize === "n" ? null : parseInt(fontSize),
               fontColor: fontColor === "n" ? null : fontColor,
@@ -295,7 +298,7 @@ class Parser {
         case StimulusType.VIDEO:
           {
             let [filePath] = splittedStimulusInstruction;
-            stimulus = { stimulusType, filePath };
+            stimulus = { ...stimulus, filePath };
           }
           break;
 
