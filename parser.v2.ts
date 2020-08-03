@@ -79,7 +79,7 @@ function splitWithEscapedCharacter(
 }
 
 class Parser {
-  // after constructor
+  // after constructor()
   rows: string[];
 
   // after splitRowsIntoSection()
@@ -92,7 +92,6 @@ class Parser {
   stimulus: any;
 
   // after parseAllSequences()
-  //
   sequences: any;
 
   constructor(rawInput: string) {
