@@ -1,31 +1,27 @@
-"use strict";
-type Instruction = string;
-
-type StimulusMap = Map<string, Stimulus>;
-
 type YesOrNo = "y" | "n";
 
 interface Stimulus {
-  stimulusType: StimulusType;
+  stimulusType?: StimulusType;
+  identifier?: string;
   content?: string;
   button?: boolean;
-  filePath: string | null;
-  fontSize: number | null;
-  fontColor: string | null;
+  filePath?: string | null;
+  fontSize?: number | null;
+  fontColor?: string | null;
 }
 
 interface Sequence {
   onSetTime?: number | "inf";
   identifier?: string;
   stimulusDuration?: number | "n" | "inf";
-  choices: Stimulus[] | "n";
-  choiceDuration: number | "inf" | "n";
-  answer: string;
-  choiceOnsetRelativeToSim: number | "inf" | "n";
-  reactionTime: number | "inf" | "n";
-  feedbackType: FeedbackType;
-  feedbackDuration: number | "n" | "inf";
-  test: YesOrNo;
+  choices?: Stimulus[] | "n";
+  choiceDuration?: number | "inf" | "n";
+  answer?: string;
+  choiceOnsetRelativeToSim?: number | "inf" | "n";
+  reactionTime?: number | "inf" | "n";
+  feedbackType?: FeedbackType;
+  feedbackDuration?: number | "n" | "inf";
+  test?: YesOrNo;
   feedback1?: string;
   feedback2?: string;
 }
@@ -47,69 +43,86 @@ enum FeedbackType {
   CHOICE = "c",
 }
 
-class Parser {
-  instructions: Instruction[];
-  stimulusInstructions: Instruction[];
-  preSequenceInstructions: Instruction[];
-  mainSequenceInstructions: Instruction[];
-  postSequenceInstructions: Instruction[];
+function splitWithEscapedCharacter(
+  text: string,
+  splitChar: string,
+  pairChar: string
+): string[] {
+  text = text + splitChar;
+  let isPairOpen = false;
+  let resultArray = [];
+  let wordBuffer = [];
 
+  for (let char of text) {
+    switch (char) {
+      case pairChar:
+        isPairOpen = !isPairOpen;
+        break;
+
+      case splitChar:
+        if (isPairOpen) {
+          wordBuffer.push(char);
+        } else {
+          // add to resultArray and flush wordBuffer
+          const completedWord = wordBuffer.join("");
+          resultArray.push(completedWord);
+          wordBuffer = [];
+        }
+        break;
+      default:
+        wordBuffer.push(char);
+        break;
+    }
+  }
+
+  return resultArray;
+}
+
+class Parser {
+  // after constructor
+  rows: string[];
+
+  // after splitRowsIntoSection()
+  stimulusRows: string[];
+  preSequenceRows: string[];
+  mainSequenceRows: string[];
+  postSequenceRows: string[];
+
+  // after parseStimulus()
   stimulus: any;
+
+  // after parseAllSequences()
+  //
   sequences: any;
 
-  /* Procedure
-  ** Objective
-  1. this.instructions = ["Task WM Test Experiment", "...", ..., "[EndPostSeq]"]
-  2. this.sections = {stimulus, sequences: {pre_sequence: [], main_sequence: [], post_sequence: []}}
-  3. this.stimulus = {"I1": {...}, "I2": {...}}
-  4. this.sequence = {"pre_sequence": [], "main_sequence": [], post_sequence: []}
-  
-  ** Methods in Order
-  1. constructor(rawInstructions)
-    - convert and trim rawInstructions to this.instructions
-  2. splitSection()
-    - splits instructions into this.sections
-    - stimulus section instructions: this.sections.stimulus
-    - sequence section instructions: this.sections.sequences(.pre_sequeence, main_sequence, post_sequence)
-  3. parseStimulus()
-    - parses stimulus instructions to this.stimulus
-  4. parseSequence()
-    - parses pre_sequence, main_sequence, post_sequence instructions to this.sequence
-  */
+  constructor(rawInput: string) {
+    this.rows = rawInput.split("\n").map((row: string) => row.trim());
 
-  /**
-   * Converts rawInstructios into array of instruction rows, with every instruction row is trimmed(whitespace removed)
-   * @param  {string} rawInstructions raw text of instruction
-   */
-  constructor(rawInstructions: string) {
-    this.instructions = rawInstructions
-      .split("\n")
-      .map((instruction: string) => instruction.trim() as Instruction);
+    this.stimulusRows = [];
+    this.preSequenceRows = [];
+    this.mainSequenceRows = [];
+    this.postSequenceRows = [];
 
-    this.stimulusInstructions = [];
-    this.preSequenceInstructions = [];
-    this.mainSequenceInstructions = [];
-    this.postSequenceInstructions = [];
     this.stimulus = {};
     this.sequences = {};
   }
 
-  /**
-   * Extracts Instruction Rows that corresponds to the given section keyword.
-   * @param {string} keyword Section Name(ex: PostSeq)
-   * @param {Instruction[]} instructions Full Instructions
-   */
-  static extractInstructionsFromSection(
-    keyword: string,
-    instructions: Instruction[]
-  ): Instruction[] {
+  execute() {
+    this.splitRowsIntoSection();
+    this.parseStimulusRows();
+    this.parseAllSequences();
+    return this;
+  }
+
+  detectSectionStartAndEnd(keyword: string) {
     let sectionStartIndex: number | null = null;
     let sectionEndIndex: number | null = null;
 
-    for (let index = 0; index < instructions.length; index++) {
-      const instruction: Instruction = instructions[index];
+    for (let index = 0; index < this.rows.length; index++) {
+      const instruction: string = this.rows[index];
       const isSectionStartInstruction: boolean = instruction == `[${keyword}]`;
       const isSectionEndInstruction: boolean = instruction == `[End${keyword}]`;
+
       if (isSectionStartInstruction) {
         sectionStartIndex = index;
       } else if (isSectionEndInstruction) {
@@ -118,69 +131,22 @@ class Parser {
       }
     }
 
-    // Instructions 섹션 파싱에 실패했을 경우
+    return { sectionStartIndex, sectionEndIndex };
+  }
+
+  splitSections(keyword: string): string[] {
+    const {
+      sectionStartIndex,
+      sectionEndIndex,
+    } = this.detectSectionStartAndEnd(keyword);
+
     if (sectionStartIndex === null || sectionEndIndex === null) {
-      throw new Error(
-        `해당 키워드(${keyword})에 대한 섹션을 추출하지 못했습니다`
-      );
-    } else if (sectionStartIndex === null && sectionEndIndex === null) {
-      throw new Error(
-        `해당 키워드(${keyword})에 대하여 섹션 시작지점은 찾았으나 섹션 종료지점을 찾지 못했습니다.`
-      );
-    } else if (sectionStartIndex === null && sectionEndIndex === null) {
-      throw new Error(
-        `해당 키워드(${keyword})에 대하여 섹션 종료지점은 찾았으나 섹션 시작지점을 찾지 못했습니다.`
-      );
+      throw new Error("섹션 파싱에 실패했습니다.");
     } else {
-      return instructions.slice(sectionStartIndex + 1, sectionEndIndex);
+      return this.rows.slice(sectionStartIndex + 1, sectionEndIndex);
     }
   }
 
-  /**
-   * Splits text with given character, ignoring content inside two pair of characters
-   * @param  {string} text text to be splitted
-   * @param  {string} splitChar character to split with
-   * @param  {string} pairChar  character of a pair of brackets whose inner content will be escaped
-   * @returns {string[]} splittedArray
-   */
-  static splitWithEscapedCharacter(
-    text: string,
-    splitChar: string,
-    pairChar: string
-  ): string[] {
-    text = text + splitChar; // parsing last
-    let isPairOpen = false;
-    let resultArray = [];
-    let wordBuffer = [];
-
-    for (let char of text) {
-      switch (char) {
-        case pairChar:
-          isPairOpen = !isPairOpen;
-          break;
-        case splitChar:
-          if (isPairOpen) {
-            wordBuffer.push(char);
-          } else {
-            // add to resultArray and flush wordBuffer
-            const completedWord = wordBuffer.join("");
-            resultArray.push(completedWord);
-            wordBuffer = [];
-          }
-          break;
-        default:
-          wordBuffer.push(char);
-          break;
-      }
-    }
-
-    return resultArray;
-  }
-
-  /**
-   * @param  {string} stimulusIdentifier identifier of a stimulus(ex: 'I1')
-   * @returns {object} stimulus
-   */
   getStimulusByIdentifier(stimulusIdentifier: string): Stimulus {
     const found = this.stimulus[stimulusIdentifier];
     if (found) {
@@ -190,251 +156,182 @@ class Parser {
     }
   }
 
-  /**
-   * Splits instructions into this.sections
-   */
-  splitSection() {
-    this.stimulusInstructions = Parser.extractInstructionsFromSection(
-      "Descriptions",
-      this.instructions
-    );
-
-    this.preSequenceInstructions = Parser.extractInstructionsFromSection(
-      "PreSeq",
-      this.instructions
-    );
-
-    this.mainSequenceInstructions = Parser.extractInstructionsFromSection(
-      "MainSeq",
-      this.instructions
-    );
-
-    this.postSequenceInstructions = Parser.extractInstructionsFromSection(
-      "PostSeq",
-      this.instructions
-    );
+  splitRowsIntoSection() {
+    this.stimulusRows = this.splitSections("Descriptions");
+    this.preSequenceRows = this.splitSections("PreSeq");
+    this.mainSequenceRows = this.splitSections("MainSeq");
+    this.postSequenceRows = this.splitSections("PostSeq");
   }
 
-  /**
-   * Parses stimulus instructions to this.stimulus
-   */
-  parseStimulus() {
-    /* 
-    STIMULUS SYNTAX
+  parseStimulusRow(row: string): Stimulus {
+    let stimulus: Stimulus = {};
 
-    # stimulus description : <type> <identifier> ...
-      - <type> := image | text | video | audio | instruction | result
-    # image description : image <identifier> <file_path> <button>
-      - <button> := true | false
-    # text description : text <identifier> <content> <font_size> <font_color>
-      - if font_size or font_color is n(none), the default setting will be used.
-      - <content> must be contained in " and "
-      - the unit for font_size is px
-    # text_file description : text_file <identifier> <file_path> <font_size> <font_color>
-      - if font_size or font_color is n(none), the default setting will be used
-    # audio description : audio <identifier> <file_path>
-    */
+    // 띄어쓰기로 row를 분리하여 토큰 array로 저장(큰따옴표(") 내부에 있는 띄어쓰기는 무시))
+    // ex) text1 T1 "you have 2 apples" n n
+    // => splittedRow : ["text1", "T1", "you have 2 apples", "n", "n"]
+    const tokens: string[] = splitWithEscapedCharacter(row, " ", '"');
 
-    for (let index = 0; index < this.stimulusInstructions.length; index++) {
-      const currentStimulusInstruction: Instruction = this.stimulusInstructions[
-        index
-      ];
+    // 첫 토큰 2개 추출
+    const [stimulusType, identifier] = tokens;
+    stimulus.stimulusType = stimulusType as StimulusType;
+    stimulus.identifier = identifier;
 
-      const splittedStimulusInstruction: string[] = Parser.splitWithEscapedCharacter(
-        currentStimulusInstruction,
-        " ",
-        '"'
-      );
+    // 나머지 토큰들은 Stimulus Type에 따라 배치가 다르기 때문에 switch 문으로 분리
+    const left = tokens.slice(2);
 
-      // Extract stimulus
-      const [stimulusType, identifier] = splittedStimulusInstruction;
-      const left = splittedStimulusInstruction.slice(2);
+    switch (stimulusType) {
+      case StimulusType.IMAGE:
+        var [
+          filePath, // ex) 'img/3.png'
+          button, // true, false => 어떤 값이든 있으면 true, false
+        ] = left;
+        stimulus = { ...stimulus, filePath, button: !!button };
+        break;
+      case StimulusType.TEXT:
+        var [content, fontSize, fontColor] = left;
+        stimulus = {
+          ...stimulus,
+          content,
+          fontSize: fontSize === "n" ? null : parseInt(fontSize),
+          fontColor: fontColor === "n" ? null : fontColor,
+        };
+        break;
+      case StimulusType.TEXT_FILE:
+        var [filePath, fontSize, fontColor] = left;
+        stimulus = {
+          ...stimulus,
+          filePath,
+          fontSize: fontSize === "n" ? null : parseInt(fontSize),
+          fontColor: fontColor === "n" ? null : fontColor,
+        };
+        break;
+      case StimulusType.AUDIO:
+      case StimulusType.VIDEO:
+        var [filePath] = tokens;
+        stimulus = { ...stimulus, filePath };
+        break;
+      default:
+        throw new Error(`${stimulusType}은 유효한 자극 유형이 아닙니다`);
+    }
 
-      // Construct Stimulus Object according to Stimulus Type
-      let stimulus: Stimulus = {
-        stimulusType: stimulusType as StimulusType,
-        filePath: null,
-        fontSize: null,
-        fontColor: null,
-      };
+    return stimulus;
+  }
 
-      switch (stimulusType) {
-        case StimulusType.IMAGE:
-          {
-            let [
-              filePath, // ex) 'img/3.png'
-              button, // true, false => 어떤 값이든 있으면 true, false
-            ] = left;
-            stimulus = { ...stimulus, filePath, button: !!button };
-          }
-          break;
+  parseStimulusRows() {
+    for (let index = 0; index < this.stimulusRows.length; index++) {
+      const stimulusRow: string = this.stimulusRows[index];
+      // const stimulus = Stimulus.FromRow(row);
+      const stimulus = this.parseStimulusRow(stimulusRow);
 
-        case StimulusType.TEXT:
-          {
-            let [content, fontSize, fontColor] = left;
-
-            stimulus = {
-              ...stimulus,
-              content,
-              fontSize: fontSize === "n" ? null : parseInt(fontSize),
-              fontColor: fontColor === "n" ? null : fontColor,
-            };
-          }
-          break;
-
-        case StimulusType.TEXT_FILE:
-          {
-            let [filePath, fontSize, fontColor] = left;
-            stimulus = {
-              ...stimulus,
-              filePath,
-              fontSize: fontSize === "n" ? null : parseInt(fontSize),
-              fontColor: fontColor === "n" ? null : fontColor,
-            };
-          }
-          break;
-
-        case StimulusType.AUDIO:
-        case StimulusType.VIDEO:
-          {
-            let [filePath] = splittedStimulusInstruction;
-            stimulus = { ...stimulus, filePath };
-          }
-          break;
-
-        default:
-          throw new Error(`${stimulusType}은 유효한 자극 유형이 아닙니다`);
+      if (stimulus.identifier) {
+        this.stimulus[stimulus.identifier] = stimulus;
+      } else {
+        throw new Error("identifier가 존재하지 않습니다");
       }
-
-      this.stimulus[identifier] = stimulus;
     }
   }
 
-  /**
-   * Parses pre_sequence, main_sequence, post_sequence instructions to this.sequence
-   */
-  parseSequence() {
-    /* 
-    SEQUENCE SYNTAX
+  parseSequenceRow(row: string): Sequence {
+    const tokens = row.split(" ");
 
-    # sequence description: <onSetTime> <identifier> <stimDur> <choices> <choiceDur> <answer> <choiceOnsetRelativeToSim> <reactionTime> <feed_back_type> <feed_back_duration> <feed_back_1> <feed_back_2> <test>
-    - <onSetTime> := <number>
-    - <stimDur> := <number> | inf
-    - <choiceDur> := <number> | inf
-    - <choices> := n | <identifier>,<identifier>,...,<identifier>
-    - <answer> := n | <index_of_the_choice>
-    - <choiceOnsetRelativeToSim> := <number>
-    - <reactionTime> := <number>
-    - <feed_back_type> := n | tf | a | c
-    - <feed_back_duration> := n | <number>
-    - <feed_back_1> := n | <identifier>
-    - <feed_back_2> := n | <identifier>
-    - <test> := y | n
-    */
-    // for each sequence sections(pre_sequence, main_sequence, post_sequence)
-    const SequenceInstructions: any = {
-      pre_sequence: this.preSequenceInstructions,
-      main_sequence: this.mainSequenceInstructions,
-      post_sequence: this.postSequenceInstructions,
+    // 토큰 추출
+    const [
+      onSetTime, // 0: number(ms)
+      identifier, // 1: string
+      stimulusDuration, // 2: number(ms) | inf
+      choices, // 3: n | comma seperated identifiers(<identifier>,<identifier>)
+      choiceDuration, // 4: number(ms) | inf
+      answer, // 5: n | index of the choice
+      choiceOnsetRelativeToSim, // 6 : number(ms)
+      reactionTime, // 7 : number(ms)
+      feedbackType, // 8 : n | tf | a | c => none, true or false, always, choice
+      feedbackDuration, // 9 : n | number(ms)
+      feedback1, // 10 n | => when feedbackType is tf or a
+      feedback2, // 11 n | => when feedbackType is tf
+      test, // 12 => considered when calculting accuracy
+    ] = tokens;
+
+    // Process & pack stimulus
+    let sequence: Sequence = {
+      onSetTime: +onSetTime,
+      identifier,
+      stimulusDuration:
+        stimulusDuration === "inf" || stimulusDuration === "n"
+          ? stimulusDuration
+          : +stimulusDuration,
+      choices:
+        choices === "n"
+          ? choices
+          : choices
+              .split(",") // ['s1', 's2']
+              .map((identifier: string) => {
+                return this.getStimulusByIdentifier(identifier);
+              }),
+      // [{type: 'image', body: 'img/2.png', font_color: null, font_size: null}, {...}]
+      choiceDuration:
+        choiceDuration === "inf" || choiceDuration === "n"
+          ? choiceDuration
+          : +choiceDuration,
+      answer,
+      choiceOnsetRelativeToSim:
+        choiceOnsetRelativeToSim == "inf" || choiceOnsetRelativeToSim == "n"
+          ? choiceOnsetRelativeToSim
+          : +choiceOnsetRelativeToSim,
+      reactionTime:
+        reactionTime == "n" || reactionTime == "inf"
+          ? reactionTime
+          : +reactionTime,
+      feedbackType: feedbackType as FeedbackType,
+      feedbackDuration:
+        feedbackDuration == "n" || feedbackDuration == "inf"
+          ? feedbackDuration
+          : +feedbackDuration,
+      test: test as YesOrNo,
     };
 
-    for (let sequenceName in SequenceInstructions) {
-      const instructions: string = SequenceInstructions[sequenceName];
-      let buffer: Sequence[] = [];
-
-      for (let i = 0; i < instructions.length; i++) {
-        const instruction: Instruction = instructions[i];
-        const splittedInstruction = instruction.split(" ");
-
-        // Extract Sequence
-        const [
-          onSetTime, // 0: number(ms)
-          identifier, // 1: string
-          stimulusDuration, // 2: number(ms) | inf
-          choices, // 3: n | comma seperated identifiers(<identifier>,<identifier>)
-          choiceDuration, // 4: number(ms) | inf
-          answer, // 5: n | index of the choice
-          choiceOnsetRelativeToSim, // 6 : number(ms)
-          reactionTime, // 7 : number(ms)
-          feedbackType, // 8 : n | tf | a | c => none, true or false, always, choice
-          feedbackDuration, // 9 : n | number(ms)
-          feedback1, // 10 n | => when feedbackType is tf or a
-          feedback2, // 11 n | => when feedbackType is tf
-          test, // 12 => considered when calculting accuracy
-        ] = splittedInstruction;
-
-        // Process & pack stimulus
-        let sequence: Sequence = {
-          onSetTime: +onSetTime,
-          identifier,
-          stimulusDuration:
-            stimulusDuration === "inf" || stimulusDuration === "n"
-              ? stimulusDuration
-              : +stimulusDuration,
-          choices:
-            choices === "n"
-              ? choices
-              : choices
-                  .split(",") // ['s1', 's2']
-                  .map((identifier: string) => {
-                    return this.getStimulusByIdentifier(identifier);
-                  }),
-          // [{type: 'image', body: 'img/2.png', font_color: null, font_size: null}, {...}]
-          choiceDuration:
-            choiceDuration === "inf" || choiceDuration === "n"
-              ? choiceDuration
-              : +choiceDuration,
-          answer,
-          choiceOnsetRelativeToSim:
-            choiceOnsetRelativeToSim == "inf" || choiceOnsetRelativeToSim == "n"
-              ? choiceOnsetRelativeToSim
-              : +choiceOnsetRelativeToSim,
-          reactionTime:
-            reactionTime == "n" || reactionTime == "inf"
-              ? reactionTime
-              : +reactionTime,
-          feedbackType: feedbackType as FeedbackType,
-          feedbackDuration:
-            feedbackDuration == "n" || feedbackDuration == "inf"
-              ? feedbackDuration
-              : +feedbackDuration,
-          test: test as YesOrNo,
+    switch (feedbackType) {
+      case FeedbackType.ALWAYS:
+        sequence = {
+          ...sequence,
+          feedback1,
         };
-
-        switch (feedbackType) {
-          case FeedbackType.ALWAYS:
-            sequence = {
-              ...sequence,
-              feedback1,
-            };
-          case FeedbackType.TRUE_OR_FALSE:
-            sequence = {
-              ...sequence,
-              feedback2,
-            };
-            break;
-          case FeedbackType.ALWAYS:
-          case FeedbackType.NONE:
-          case FeedbackType.CHOICE:
-            break;
-          default:
-            throw new Error(
-              `${feedbackType}은 유효한 Feedback Type이 아닙니다.`
-            );
-        }
-
-        buffer.push(sequence);
-      }
-
-      this.sequences[sequenceName] = buffer;
+      case FeedbackType.TRUE_OR_FALSE:
+        sequence = {
+          ...sequence,
+          feedback2,
+        };
+        break;
+      case FeedbackType.ALWAYS:
+      case FeedbackType.NONE:
+      case FeedbackType.CHOICE:
+        break;
+      default:
+        throw new Error(`${feedbackType}은 유효한 Feedback Type이 아닙니다.`);
     }
+
+    return sequence;
   }
 
-  execute() {
-    this.splitSection();
-    this.parseStimulus();
-    this.parseSequence();
-    return this;
+  parseSequenceRows(rows: string[]): Sequence[] {
+    let sequences: Sequence[] = [];
+
+    for (let i = 0; i < rows.length; i++) {
+      const sequenceRow: string = rows[i];
+      const sequence = this.parseSequenceRow(sequenceRow);
+      sequences.push(sequence);
+    }
+
+    return sequences;
+  }
+
+  parseAllSequences() {
+    this.sequences.pre_sequence = this.parseSequenceRows(this.preSequenceRows);
+    this.sequences.main_sequence = this.parseSequenceRows(
+      this.mainSequenceRows
+    );
+    this.sequences.post_sequence = this.parseSequenceRows(
+      this.postSequenceRows
+    );
   }
 
   json() {
