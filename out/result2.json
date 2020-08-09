@@ -1,187 +1,204 @@
 {
-  "stimulus": {
-    "S": {
-      "stimulusType": "text_file",
-      "filePath": "test_inst.txt",
-      "fontSize": null,
-      "fontColor": null
-    },
-    "T1": {
-      "stimulusType": "text",
-      "content": "Which fruit do yon eat?",
-      "fontSize": 20,
-      "fontColor": "red"
-    },
-    "I1": {
+ "stimulus": {
+  "S": {
+   "stimulusType": "text_file",
+   "identifier": "S",
+   "filePath": "test_inst.txt",
+   "fontSize": null,
+   "fontColor": null
+  },
+  "T1": {
+   "stimulusType": "text",
+   "identifier": "T1",
+   "content": "Which fruit do yon eat?",
+   "fontSize": 20,
+   "fontColor": "red"
+  },
+  "I1": {
+   "stimulusType": "image",
+   "identifier": "I1",
+   "filePath": "img/rr1.png",
+   "button": false
+  },
+  "I2": {
+   "stimulusType": "image",
+   "identifier": "I2",
+   "filePath": "img/yy1.png",
+   "button": false
+  },
+  "T2": {
+   "stimulusType": "text",
+   "identifier": "T2",
+   "content": "eat",
+   "fontSize": null,
+   "fontColor": null
+  },
+  "T3": {
+   "stimulusType": "text",
+   "identifier": "T3",
+   "content": "don't eat",
+   "fontSize": null,
+   "fontColor": null
+  },
+  "F": {
+   "stimulusType": "image",
+   "identifier": "F",
+   "filePath": "img/fix.png",
+   "button": false
+  },
+  "T4": {
+   "stimulusType": "text",
+   "identifier": "T4",
+   "content": "Which is the previous image?",
+   "fontSize": 20,
+   "fontColor": "blue"
+  },
+  "correct": {
+   "stimulusType": "image",
+   "identifier": "correct",
+   "filePath": "img/cardsorting/correct2.png",
+   "button": false
+  },
+  "wrong": {
+   "stimulusType": "image",
+   "identifier": "wrong",
+   "filePath": "img/cardsorting/wrong2.png",
+   "button": false
+  },
+  "T5": {
+   "stimulusType": "text",
+   "identifier": "T5",
+   "content": "Thank you!",
+   "fontSize": 40,
+   "fontColor": null
+  }
+ },
+ "sequences": {
+  "pre_sequence": [
+   {
+    "onSetTime": 0,
+    "identifier": "S",
+    "stimulusDuration": 3000,
+    "choices": "n",
+    "choiceDuration": "inf",
+    "answer": "n",
+    "choiceOnsetRelativeToSim": 0,
+    "reactionTime": "inf",
+    "feedbackType": "n",
+    "feedbackDuration": "n",
+    "test": "n"
+   }
+  ],
+  "main_sequence": [
+   {
+    "onSetTime": 500,
+    "identifier": "T1",
+    "stimulusDuration": "inf",
+    "choices": [
+     {
       "stimulusType": "image",
+      "identifier": "I1",
       "filePath": "img/rr1.png",
       "button": false
-    },
-    "I2": {
+     },
+     {
       "stimulusType": "image",
+      "identifier": "I2",
       "filePath": "img/yy1.png",
       "button": false
-    },
-    "T2": {
+     }
+    ],
+    "choiceDuration": "inf",
+    "answer": "n",
+    "choiceOnsetRelativeToSim": 0,
+    "reactionTime": 10000,
+    "feedbackType": "n",
+    "feedbackDuration": "n",
+    "test": "y"
+   },
+   {
+    "onSetTime": 1000,
+    "identifier": "F",
+    "stimulusDuration": 2000,
+    "choices": "n",
+    "choiceDuration": "inf",
+    "answer": "n",
+    "choiceOnsetRelativeToSim": 0,
+    "reactionTime": "inf",
+    "feedbackType": "n",
+    "feedbackDuration": "n",
+    "test": "n"
+   },
+   {
+    "onSetTime": 1500,
+    "identifier": "I1",
+    "stimulusDuration": "inf",
+    "choices": [
+     {
       "stimulusType": "text",
+      "identifier": "T2",
       "content": "eat",
       "fontSize": null,
       "fontColor": null
-    },
-    "T3": {
+     },
+     {
       "stimulusType": "text",
+      "identifier": "T3",
       "content": "don't eat",
       "fontSize": null,
       "fontColor": null
-    },
-    "F": {
-      "stimulusType": "image",
-      "filePath": "img/fix.png",
-      "button": false
-    },
-    "T4": {
-      "stimulusType": "text",
-      "content": "Which is the previous image?",
-      "fontSize": 20,
-      "fontColor": "blue"
-    },
-    "correct": {
-      "stimulusType": "image",
-      "filePath": "img/cardsorting/correct2.png",
-      "button": false
-    },
-    "wrong": {
-      "stimulusType": "image",
-      "filePath": "img/cardsorting/wrong2.png",
-      "button": false
-    },
-    "T5": {
-      "stimulusType": "text",
-      "content": "Thank you!",
-      "fontSize": 40,
-      "fontColor": null
-    }
-  },
-  "sequences": {
-    "pre_sequence": [
-      {
-        "onSetTime": 0,
-        "identifier": "S",
-        "stimulusDuration": 3000,
-        "choices": "n",
-        "choiceDuration": "inf",
-        "answer": "n",
-        "choiceOnsetRelativeToSim": 0,
-        "reactionTime": "inf",
-        "feedbackType": "n",
-        "feedbackDuration": "n",
-        "test": "n"
-      }
+     }
     ],
-    "main_sequence": [
-      {
-        "onSetTime": 500,
-        "identifier": "T1",
-        "stimulusDuration": "inf",
-        "choices": [
-          {
-            "stimulusType": "image",
-            "filePath": "img/rr1.png",
-            "button": false
-          },
-          {
-            "stimulusType": "image",
-            "filePath": "img/yy1.png",
-            "button": false
-          }
-        ],
-        "choiceDuration": "inf",
-        "answer": "n",
-        "choiceOnsetRelativeToSim": 0,
-        "reactionTime": 10000,
-        "feedbackType": "n",
-        "feedbackDuration": "n",
-        "test": "y"
-      },
-      {
-        "onSetTime": 1000,
-        "identifier": "F",
-        "stimulusDuration": 2000,
-        "choices": "n",
-        "choiceDuration": "inf",
-        "answer": "n",
-        "choiceOnsetRelativeToSim": 0,
-        "reactionTime": "inf",
-        "feedbackType": "n",
-        "feedbackDuration": "n",
-        "test": "n"
-      },
-      {
-        "onSetTime": 1500,
-        "identifier": "I1",
-        "stimulusDuration": "inf",
-        "choices": [
-          {
-            "stimulusType": "text",
-            "content": "eat",
-            "fontSize": null,
-            "fontColor": null
-          },
-          {
-            "stimulusType": "text",
-            "content": "don't eat",
-            "fontSize": null,
-            "fontColor": null
-          }
-        ],
-        "choiceDuration": "inf",
-        "answer": "n",
-        "choiceOnsetRelativeToSim": 0,
-        "reactionTime": 10000,
-        "feedbackType": "n",
-        "feedbackDuration": "n",
-        "test": "y"
-      },
-      {
-        "onSetTime": 2000,
-        "identifier": "T4",
-        "stimulusDuration": "inf",
-        "choices": [
-          {
-            "stimulusType": "image",
-            "filePath": "img/rr1.png",
-            "button": false
-          },
-          {
-            "stimulusType": "image",
-            "filePath": "img/yy1.png",
-            "button": false
-          }
-        ],
-        "choiceDuration": "inf",
-        "answer": "0",
-        "choiceOnsetRelativeToSim": 0,
-        "reactionTime": 10000,
-        "feedbackType": "tf",
-        "feedbackDuration": 2000,
-        "test": "y",
-        "feedback2": "wrong"
-      }
+    "choiceDuration": "inf",
+    "answer": "n",
+    "choiceOnsetRelativeToSim": 0,
+    "reactionTime": 10000,
+    "feedbackType": "n",
+    "feedbackDuration": "n",
+    "test": "y"
+   },
+   {
+    "onSetTime": 2000,
+    "identifier": "T4",
+    "stimulusDuration": "inf",
+    "choices": [
+     {
+      "stimulusType": "image",
+      "identifier": "I1",
+      "filePath": "img/rr1.png",
+      "button": false
+     },
+     {
+      "stimulusType": "image",
+      "identifier": "I2",
+      "filePath": "img/yy1.png",
+      "button": false
+     }
     ],
-    "post_sequence": [
-      {
-        "onSetTime": 0,
-        "identifier": "T5",
-        "stimulusDuration": 5000,
-        "choices": "n",
-        "choiceDuration": "inf",
-        "answer": "n",
-        "choiceOnsetRelativeToSim": 0,
-        "reactionTime": "inf",
-        "feedbackType": "n",
-        "feedbackDuration": "n",
-        "test": "n"
-      }
-    ]
-  }
+    "choiceDuration": "inf",
+    "answer": "0",
+    "choiceOnsetRelativeToSim": 0,
+    "reactionTime": 10000,
+    "feedbackType": "tf",
+    "feedbackDuration": 2000,
+    "test": "y",
+    "feedback2": "wrong"
+   }
+  ],
+  "post_sequence": [
+   {
+    "onSetTime": 0,
+    "identifier": "T5",
+    "stimulusDuration": 5000,
+    "choices": "n",
+    "choiceDuration": "inf",
+    "answer": "n",
+    "choiceOnsetRelativeToSim": 0,
+    "reactionTime": "inf",
+    "feedbackType": "n",
+    "feedbackDuration": "n",
+    "test": "n"
+   }
+  ]
+ }
 }
