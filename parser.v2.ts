@@ -22,8 +22,8 @@ interface Sequence {
   feedbackType?: FeedbackType;
   feedbackDuration?: number | null;
   test?: boolean;
-  feedback1?: string;
-  feedback2?: string;
+  feedback1?: Stimulus | null;
+  feedback2?: Stimulus | null;
 }
 
 enum StimulusType {
@@ -290,12 +290,18 @@ class Parser {
       case FeedbackType.ALWAYS:
         sequence = {
           ...sequence,
-          feedback1,
+          feedback1:
+            feedback1 == "n"
+              ? null
+              : this.getStimulusByIdentifier(feedback1) || null,
         };
       case FeedbackType.TRUE_OR_FALSE:
         sequence = {
           ...sequence,
-          feedback2,
+          feedback2:
+            feedback2 == "n"
+              ? null
+              : this.getStimulusByIdentifier(feedback2) || null,
         };
         break;
       case FeedbackType.ALWAYS:
