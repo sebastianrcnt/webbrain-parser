@@ -12,7 +12,7 @@ interface Stimulus {
 
 interface Sequence {
   onSetTime?: number | "inf";
-  identifier?: string;
+  stimulus: Stimulus;
   stimulusDuration?: number | "n" | "inf";
   choices?: Stimulus[] | "n";
   choiceDuration?: number | "inf" | "n";
@@ -253,7 +253,7 @@ class Parser {
     // Process & pack stimulus
     let sequence: Sequence = {
       onSetTime: +onSetTime,
-      identifier,
+      stimulus: this.stimulus[identifier] || null,
       stimulusDuration:
         stimulusDuration === "inf" || stimulusDuration === "n"
           ? stimulusDuration
