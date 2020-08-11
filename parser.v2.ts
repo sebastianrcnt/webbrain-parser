@@ -16,7 +16,7 @@ interface Sequence {
   stimulusDuration?: number | null;
   choices?: Stimulus[] | null;
   choiceDuration?: number | null;
-  answer?: string;
+  answer?: number | null;
   choiceOnsetRelativeToSim?: number | null;
   reactionTime?: number | null;
   feedbackType?: FeedbackType;
@@ -271,7 +271,7 @@ class Parser {
         choiceDuration === "inf" || choiceDuration === "n"
           ? null
           : +choiceDuration,
-      answer,
+      answer: answer === "n" ? null : +answer,
       choiceOnsetRelativeToSim:
         choiceOnsetRelativeToSim == "inf" || choiceOnsetRelativeToSim == "n"
           ? null
