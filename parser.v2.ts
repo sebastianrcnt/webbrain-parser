@@ -11,16 +11,16 @@ interface Stimulus {
 }
 
 interface Sequence {
-  onSetTime?: number | "inf";
+  onSetTime?: number | null;
   stimulus: Stimulus;
-  stimulusDuration?: number | "n" | "inf";
-  choices?: Stimulus[] | "n";
-  choiceDuration?: number | "inf" | "n";
+  stimulusDuration?: number | null ;
+  choices?: Stimulus[] | null;
+  choiceDuration?: number | null;
   answer?: string;
-  choiceOnsetRelativeToSim?: number | "inf" | "n";
-  reactionTime?: number | "inf" | "n";
+  choiceOnsetRelativeToSim?: number | null;
+  reactionTime?: number | null;
   feedbackType?: FeedbackType;
-  feedbackDuration?: number | "n" | "inf";
+  feedbackDuration?: number | null;
   test?: YesOrNo;
   feedback1?: string;
   feedback2?: string;
@@ -256,11 +256,11 @@ class Parser {
       stimulus: this.stimulus[identifier] || null,
       stimulusDuration:
         stimulusDuration === "inf" || stimulusDuration === "n"
-          ? stimulusDuration
+          ? null
           : +stimulusDuration,
       choices:
         choices === "n"
-          ? choices
+          ? null
           : choices
               .split(",") // ['s1', 's2']
               .map((identifier: string) => {
@@ -269,21 +269,21 @@ class Parser {
       // [{type: 'image', body: 'img/2.png', font_color: null, font_size: null}, {...}]
       choiceDuration:
         choiceDuration === "inf" || choiceDuration === "n"
-          ? choiceDuration
+          ? null
           : +choiceDuration,
       answer,
       choiceOnsetRelativeToSim:
         choiceOnsetRelativeToSim == "inf" || choiceOnsetRelativeToSim == "n"
-          ? choiceOnsetRelativeToSim
+          ? null
           : +choiceOnsetRelativeToSim,
       reactionTime:
         reactionTime == "n" || reactionTime == "inf"
-          ? reactionTime
+          ? null
           : +reactionTime,
       feedbackType: feedbackType as FeedbackType,
       feedbackDuration:
         feedbackDuration == "n" || feedbackDuration == "inf"
-          ? feedbackDuration
+          ? null
           : +feedbackDuration,
       test: test as YesOrNo,
     };
