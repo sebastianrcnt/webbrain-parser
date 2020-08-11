@@ -169,12 +169,12 @@ class Parser {
         // Process & pack stimulus
         let sequence = {
             onSetTime: +onSetTime,
-            identifier,
+            stimulus: this.stimulus[identifier] || null,
             stimulusDuration: stimulusDuration === "inf" || stimulusDuration === "n"
-                ? stimulusDuration
+                ? null
                 : +stimulusDuration,
             choices: choices === "n"
-                ? choices
+                ? null
                 : choices
                     .split(",") // ['s1', 's2']
                     .map((identifier) => {
@@ -182,20 +182,18 @@ class Parser {
                 }),
             // [{type: 'image', body: 'img/2.png', font_color: null, font_size: null}, {...}]
             choiceDuration: choiceDuration === "inf" || choiceDuration === "n"
-                ? choiceDuration
+                ? null
                 : +choiceDuration,
             answer,
             choiceOnsetRelativeToSim: choiceOnsetRelativeToSim == "inf" || choiceOnsetRelativeToSim == "n"
-                ? choiceOnsetRelativeToSim
+                ? null
                 : +choiceOnsetRelativeToSim,
-            reactionTime: reactionTime == "n" || reactionTime == "inf"
-                ? reactionTime
-                : +reactionTime,
+            reactionTime: reactionTime == "n" || reactionTime == "inf" ? null : +reactionTime,
             feedbackType: feedbackType,
             feedbackDuration: feedbackDuration == "n" || feedbackDuration == "inf"
-                ? feedbackDuration
+                ? null
                 : +feedbackDuration,
-            test: test,
+            test: test == "y",
         };
         switch (feedbackType) {
             case FeedbackType.ALWAYS:

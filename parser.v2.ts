@@ -13,7 +13,7 @@ interface Stimulus {
 interface Sequence {
   onSetTime?: number | null;
   stimulus: Stimulus;
-  stimulusDuration?: number | null ;
+  stimulusDuration?: number | null;
   choices?: Stimulus[] | null;
   choiceDuration?: number | null;
   answer?: string;
@@ -21,7 +21,7 @@ interface Sequence {
   reactionTime?: number | null;
   feedbackType?: FeedbackType;
   feedbackDuration?: number | null;
-  test?: YesOrNo;
+  test?: boolean;
   feedback1?: string;
   feedback2?: string;
 }
@@ -277,15 +277,13 @@ class Parser {
           ? null
           : +choiceOnsetRelativeToSim,
       reactionTime:
-        reactionTime == "n" || reactionTime == "inf"
-          ? null
-          : +reactionTime,
+        reactionTime == "n" || reactionTime == "inf" ? null : +reactionTime,
       feedbackType: feedbackType as FeedbackType,
       feedbackDuration:
         feedbackDuration == "n" || feedbackDuration == "inf"
           ? null
           : +feedbackDuration,
-      test: test as YesOrNo,
+      test: test == "y",
     };
 
     switch (feedbackType) {

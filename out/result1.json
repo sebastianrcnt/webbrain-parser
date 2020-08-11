@@ -670,8 +670,13 @@
   "pre_sequence": [
    {
     "onSetTime": 0,
-    "identifier": "I2",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "I2",
+     "filePath": "img/instr.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -680,20 +685,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
-    "choiceOnsetRelativeToSim": "n",
-    "reactionTime": "inf",
+    "choiceOnsetRelativeToSim": null,
+    "reactionTime": null,
     "feedbackType": "n",
-    "feedbackDuration": "n",
-    "test": "n"
+    "feedbackDuration": null,
+    "test": false
    }
   ],
   "main_sequence": [
    {
     "onSetTime": 0,
-    "identifier": "F1",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F1",
+     "filePath": "img/F001.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -726,20 +736,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F2",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F2",
+     "filePath": "img/F002.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -772,20 +787,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F3",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F3",
+     "filePath": "img/F003.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -818,20 +838,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F4",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F4",
+     "filePath": "img/F004.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -864,20 +889,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F5",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F5",
+     "filePath": "img/F005.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -910,20 +940,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F6",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F6",
+     "filePath": "img/F006.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -956,20 +991,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F7",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F7",
+     "filePath": "img/F007.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -1002,20 +1042,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F8",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F8",
+     "filePath": "img/F008.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -1048,20 +1093,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F9",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F9",
+     "filePath": "img/F009.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -1094,20 +1144,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F10",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F10",
+     "filePath": "img/F010.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -1140,20 +1195,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F11",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F11",
+     "filePath": "img/F011.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -1186,20 +1246,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F12",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F12",
+     "filePath": "img/F012.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -1232,20 +1297,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F13",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F13",
+     "filePath": "img/F013.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -1278,20 +1348,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F14",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F14",
+     "filePath": "img/F014.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -1324,20 +1399,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F15",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F15",
+     "filePath": "img/F015.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -1370,20 +1450,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F16",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F16",
+     "filePath": "img/F016.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -1416,20 +1501,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F17",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F17",
+     "filePath": "img/F017.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -1462,20 +1552,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F18",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F18",
+     "filePath": "img/F018.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -1508,20 +1603,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F19",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F19",
+     "filePath": "img/F019.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -1554,20 +1654,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F20",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F20",
+     "filePath": "img/F020.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -1600,20 +1705,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F21",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F21",
+     "filePath": "img/F021.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -1646,20 +1756,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F22",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F22",
+     "filePath": "img/F022.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -1692,20 +1807,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F23",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F23",
+     "filePath": "img/F023.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -1738,20 +1858,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F24",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F24",
+     "filePath": "img/F024.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -1784,20 +1909,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F25",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F25",
+     "filePath": "img/F025.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -1830,20 +1960,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F26",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F26",
+     "filePath": "img/F026.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -1876,20 +2011,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F27",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F27",
+     "filePath": "img/F027.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -1922,20 +2062,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F28",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F28",
+     "filePath": "img/F028.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -1968,20 +2113,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F29",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F29",
+     "filePath": "img/F029.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -2014,20 +2164,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F30",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F30",
+     "filePath": "img/F030.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -2060,20 +2215,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F31",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F31",
+     "filePath": "img/F031.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -2106,20 +2266,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F32",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F32",
+     "filePath": "img/F032.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -2152,20 +2317,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F33",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F33",
+     "filePath": "img/F033.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -2198,20 +2368,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F34",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F34",
+     "filePath": "img/F034.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -2244,20 +2419,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F35",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F35",
+     "filePath": "img/F035.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -2290,20 +2470,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F36",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F36",
+     "filePath": "img/F036.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -2336,20 +2521,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F37",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F37",
+     "filePath": "img/F037.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -2382,20 +2572,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F38",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F38",
+     "filePath": "img/F038.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -2428,20 +2623,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F39",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F39",
+     "filePath": "img/F039.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -2474,20 +2674,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F40",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F40",
+     "filePath": "img/F040.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -2520,20 +2725,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F41",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F41",
+     "filePath": "img/F041.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -2566,20 +2776,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F42",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F42",
+     "filePath": "img/F042.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -2612,20 +2827,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F43",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F43",
+     "filePath": "img/F043.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -2658,20 +2878,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F44",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F44",
+     "filePath": "img/F044.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -2704,20 +2929,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F45",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F45",
+     "filePath": "img/F045.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -2750,20 +2980,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F46",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F46",
+     "filePath": "img/F046.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -2796,20 +3031,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F47",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F47",
+     "filePath": "img/F047.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -2842,20 +3082,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F48",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F48",
+     "filePath": "img/F048.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -2888,20 +3133,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F49",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F49",
+     "filePath": "img/F049.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -2934,20 +3184,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F50",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F50",
+     "filePath": "img/F050.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -2980,20 +3235,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F51",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F51",
+     "filePath": "img/F051.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -3026,20 +3286,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F52",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F52",
+     "filePath": "img/F052.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -3072,20 +3337,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F53",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F53",
+     "filePath": "img/F053.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -3118,20 +3388,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F54",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F54",
+     "filePath": "img/F054.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -3164,20 +3439,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F55",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F55",
+     "filePath": "img/F055.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -3210,20 +3490,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F56",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F56",
+     "filePath": "img/F056.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -3256,20 +3541,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F57",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F57",
+     "filePath": "img/F057.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -3302,20 +3592,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F58",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F58",
+     "filePath": "img/F058.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -3348,20 +3643,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F59",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F59",
+     "filePath": "img/F059.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -3394,20 +3694,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F60",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F60",
+     "filePath": "img/F060.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -3440,20 +3745,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F61",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F61",
+     "filePath": "img/F061.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -3486,20 +3796,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F62",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F62",
+     "filePath": "img/F062.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -3532,20 +3847,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F63",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F63",
+     "filePath": "img/F063.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -3578,20 +3898,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F64",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F64",
+     "filePath": "img/F064.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -3624,20 +3949,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F65",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F65",
+     "filePath": "img/F065.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -3670,20 +4000,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F66",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F66",
+     "filePath": "img/F066.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -3716,20 +4051,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F67",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F67",
+     "filePath": "img/F067.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -3762,20 +4102,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F68",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F68",
+     "filePath": "img/F068.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -3808,20 +4153,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F69",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F69",
+     "filePath": "img/F069.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -3854,20 +4204,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F70",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F70",
+     "filePath": "img/F070.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -3900,20 +4255,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F71",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F71",
+     "filePath": "img/F071.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -3946,20 +4306,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F72",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F72",
+     "filePath": "img/F072.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -3992,20 +4357,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F73",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F73",
+     "filePath": "img/F073.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -4038,20 +4408,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F74",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F74",
+     "filePath": "img/F074.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -4084,20 +4459,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F75",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F75",
+     "filePath": "img/F075.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -4130,20 +4510,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F76",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F76",
+     "filePath": "img/F076.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -4176,20 +4561,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F77",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F77",
+     "filePath": "img/F077.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -4222,20 +4612,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F78",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F78",
+     "filePath": "img/F078.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -4268,20 +4663,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F79",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F79",
+     "filePath": "img/F079.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -4314,20 +4714,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F80",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F80",
+     "filePath": "img/F080.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -4360,20 +4765,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F81",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F81",
+     "filePath": "img/F081.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -4406,20 +4816,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F82",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F82",
+     "filePath": "img/F082.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -4452,20 +4867,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F83",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F83",
+     "filePath": "img/F083.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -4498,20 +4918,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F84",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F84",
+     "filePath": "img/F084.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -4544,20 +4969,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F85",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F85",
+     "filePath": "img/F085.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -4590,20 +5020,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F86",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F86",
+     "filePath": "img/F086.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -4636,20 +5071,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F87",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F87",
+     "filePath": "img/F087.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -4682,20 +5122,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F88",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F88",
+     "filePath": "img/F088.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -4728,20 +5173,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F89",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F89",
+     "filePath": "img/F089.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -4774,20 +5224,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F90",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F90",
+     "filePath": "img/F090.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -4820,20 +5275,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F91",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F91",
+     "filePath": "img/F091.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -4866,20 +5326,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F92",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F92",
+     "filePath": "img/F092.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -4912,20 +5377,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F93",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F93",
+     "filePath": "img/F093.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -4958,20 +5428,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F94",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F94",
+     "filePath": "img/F094.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -5004,20 +5479,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F95",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F95",
+     "filePath": "img/F095.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -5050,20 +5530,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F96",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F96",
+     "filePath": "img/F096.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -5096,20 +5581,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F97",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F97",
+     "filePath": "img/F097.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -5142,20 +5632,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F98",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F98",
+     "filePath": "img/F098.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -5188,20 +5683,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F99",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F99",
+     "filePath": "img/F099.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -5234,20 +5734,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F100",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F100",
+     "filePath": "img/F100.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -5280,20 +5785,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F101",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F101",
+     "filePath": "img/F101.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -5326,20 +5836,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F102",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F102",
+     "filePath": "img/F102.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -5372,20 +5887,25 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    },
    {
     "onSetTime": 0,
-    "identifier": "F103",
-    "stimulusDuration": "inf",
+    "stimulus": {
+     "stimulusType": "image",
+     "identifier": "F103",
+     "filePath": "img/F103.png",
+     "button": false
+    },
+    "stimulusDuration": null,
     "choices": [
      {
       "stimulusType": "image",
@@ -5418,13 +5938,13 @@
       "button": false
      }
     ],
-    "choiceDuration": "inf",
+    "choiceDuration": null,
     "answer": "n",
     "choiceOnsetRelativeToSim": 0,
-    "reactionTime": "inf",
+    "reactionTime": null,
     "feedbackType": "a",
     "feedbackDuration": 1000,
-    "test": "y",
+    "test": true,
     "feedback1": "A1",
     "feedback2": "n"
    }
