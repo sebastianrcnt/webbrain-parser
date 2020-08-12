@@ -197,9 +197,13 @@ class Parser {
         };
         switch (feedbackType) {
             case FeedbackType.ALWAYS:
-                sequence = Object.assign(Object.assign({}, sequence), { feedback1 });
+                sequence = Object.assign(Object.assign({}, sequence), { feedback1: feedback1 == "n"
+                        ? null
+                        : this.getStimulusByIdentifier(feedback1) || null });
             case FeedbackType.TRUE_OR_FALSE:
-                sequence = Object.assign(Object.assign({}, sequence), { feedback2 });
+                sequence = Object.assign(Object.assign({}, sequence), { feedback2: feedback2 == "n"
+                        ? null
+                        : this.getStimulusByIdentifier(feedback2) || null });
                 break;
             case FeedbackType.ALWAYS:
             case FeedbackType.NONE:

@@ -210,7 +210,12 @@
     "feedbackType": "tf",
     "feedbackDuration": 2000,
     "test": true,
-    "feedback2": "wrong"
+    "feedback2": {
+     "stimulusType": "image",
+     "identifier": "wrong",
+     "filePath": "img/cardsorting/wrong2.png",
+     "button": false
+    }
    }
   ],
   "post_sequence": [
