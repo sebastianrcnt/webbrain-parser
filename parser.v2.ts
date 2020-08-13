@@ -95,7 +95,18 @@ class Parser {
   sequences: any;
 
   constructor(rawInput: string) {
-    this.rows = rawInput.split("\n").map((row: string) => row.trim());
+    this.rows = rawInput
+      .split("\n")
+      .filter((row) => !!row)
+      .map((row) => {
+        const idx = row.indexOf("#");
+        if (idx != -1) {
+          return row.slice(0, idx);
+        } else {
+          return row;
+        }
+      })
+      .map((row) => row.trim());
 
     this.stimulusRows = [];
     this.preSequenceRows = [];
