@@ -184,7 +184,7 @@ class Parser {
             choiceDuration: choiceDuration === "inf" || choiceDuration === "n"
                 ? null
                 : +choiceDuration,
-            answer,
+            answer: answer === "n" ? null : +answer,
             choiceOnsetRelativeToSim: choiceOnsetRelativeToSim == "inf" || choiceOnsetRelativeToSim == "n"
                 ? null
                 : +choiceOnsetRelativeToSim,
@@ -201,11 +201,12 @@ class Parser {
                         ? null
                         : this.getStimulusByIdentifier(feedback1) || null });
             case FeedbackType.TRUE_OR_FALSE:
-                sequence = Object.assign(Object.assign({}, sequence), { feedback2: feedback2 == "n"
+                sequence = Object.assign(Object.assign({}, sequence), { feedback1: feedback1 == "n"
+                        ? null
+                        : this.getStimulusByIdentifier(feedback1) || null, feedback2: feedback2 == "n"
                         ? null
                         : this.getStimulusByIdentifier(feedback2) || null });
                 break;
-            case FeedbackType.ALWAYS:
             case FeedbackType.NONE:
             case FeedbackType.CHOICE:
                 break;

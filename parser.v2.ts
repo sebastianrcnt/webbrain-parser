@@ -298,13 +298,16 @@ class Parser {
       case FeedbackType.TRUE_OR_FALSE:
         sequence = {
           ...sequence,
+          feedback1:
+            feedback1 == "n"
+              ? null
+              : this.getStimulusByIdentifier(feedback1) || null,
           feedback2:
             feedback2 == "n"
               ? null
               : this.getStimulusByIdentifier(feedback2) || null,
         };
         break;
-      case FeedbackType.ALWAYS:
       case FeedbackType.NONE:
       case FeedbackType.CHOICE:
         break;
