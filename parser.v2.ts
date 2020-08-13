@@ -97,7 +97,6 @@ class Parser {
   constructor(rawInput: string) {
     this.rows = rawInput
       .split("\n")
-      .filter((row) => !!row)
       .map((row) => {
         const idx = row.indexOf("#");
         if (idx != -1) {
@@ -106,6 +105,7 @@ class Parser {
           return row;
         }
       })
+      .filter((row) => !!row)
       .map((row) => row.trim());
 
     this.stimulusRows = [];
